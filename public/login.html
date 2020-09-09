@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="loginStyle.css">
+
+    <title>Loginpage</title>
+  </head>
+
+  <body>
+    
+    <div class="container-fluid">
+      <div class="row mt-5">
+
+        <div class="col-md-1">
+
+        </div>
+        
+        <div class="col-md-5 col-sm-12 text-center">
+          <img src="smart.png" class="img-fluid" alt="pic" style="height: 600px; width: 600px; ">
+        </div>
+
+        <div class="col-md-5 col-sm-12 align-self-center" id="loginDiv">
+          <div class="row">
+              <div class="col">
+                  <h1 id="site">SmartChat</h1>
+              </div>
+          </div>
+          <!-- <div>
+            <img src="smart.png" class="img-fluid" alt="logo">
+          </div> -->
+          
+          <div class="row justify-content-around">
+              <div class="col-7" id="loginSection">
+                  
+                  <form class="row " action="http://localhost:3000/home" method="POST">
+                      <div class="form-group col-10 offset-1 mt-4" >
+                          <input class="form-control" id="userName" type="text" name="userName" placeholder="Enter your username">
+                      </div>
+                      <div class="form-group col-10 offset-1">
+                          <input class="form-control" id="password" type="password" name="password" placeholder="Enter your password">
+                      </div>
+
+                      <div class="form-group col-10 offset-1">
+                        <label style="color:#33B5FF; font-size: 20px; font-weight: bold;" for="roomName">Choose a Room :</label>
+                        <select name="roomName" id="roomName" style="width:110px; margin-left: 5px;">
+                            <option value="angular">Angular</option>
+                            <option value="nodejs">Nodejs</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="vue">Vue</option>
+                        </select>
+                      </div>
+                      
+
+                      <div class="form-group col-10 offset-1">
+                          <input type="checkbox"><label class="ml-1" style="color:wheat">Remember me</label>
+                      </div>
+
+                      <div class="justify-content around">
+                          <h6 id ="errormessage" class="ml-5" style="color: white;"> </h6>
+                      </div>
+                      
+                      <div class="form-group col-10 offset-1">
+                          <input class="btn btn-info w-100" type="submit"  value="Login" >
+                      </div>
+                      
+                      <div class="form-group col-10 offset-1" >
+                          <input class="btn btn-info w-100" type="button" value="Sign Up">
+                      </div>
+                  </form>
+                  
+              </div>
+          </div>
+      </div>
+
+      </div>
+    </div>
+
+    <!-- <script>
+        function loginEvent()
+        {
+            var username1= document.getElementById("username");
+            var password1= document.getElementById("password");
+            var errormessage1 =document.getElementById("errormessage");
+            var username = username1.value;
+            var password = password1.value;
+
+            errormessage1.innerHTML ="";
+            var x=0;
+            if (username=="") 
+            {  
+                x=1;
+                errormessage1.innerHTML+= "Username cannot be Empty <br/> "
+                username1.className ="form-control "
+                username1.style = "border: 2px solid red"
+            }
+            if (password=="")
+            {  
+                x=1;
+                errormessage1.innerHTML+= "Password cannot be Empty <br/>"
+                password1.className =" form-control"
+                password1.style = "border: 2px solid red"
+            }
+            // if(x==0)
+            // {
+            //     window.location.href='home.html';
+            // }
+
+        }
+    </script> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+
+</html>

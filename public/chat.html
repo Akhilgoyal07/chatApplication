@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="chatStyle.css">
+</head>
+<body>
+    
+    <div class="row mt-2">
+        <div class="col-1 offset-4 ">
+            <img id="logo"  src="smart.png">
+        </div>
+        <div class="col-6 self-align-center mt-4">
+            <h1> SmartChat</h1>
+        </div>
+    </div>
+    
+    <div class="container mt-4" >
+        <div class="row">
+            <div class=" col-10">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="nobita.jfif" style="height: 50px ;width:50px; border: 1px solid black; border-radius: 40px;">
+                    </div>
+                    <div class="col-2 mt-2">
+                        <p id="userName" style="font-weight: bolder; font-size: larger;"></p>
+                    </div>
+                    <div class="col-4 ">
+                        <p id="roomName" style="margin-left: 140px; font-weight: bolder; font-size: 30px; color:rgb(44, 169, 226)"> </p>
+                    </div>
+                </div>
+
+                <div class="msgBox" id="chatMessagesDiv">
+                </div>
+
+                <form id="chatForm" >
+                    <input type="text" name="chatMsg" id="chatMsg">
+                    <input type="button" class="btn" value="send " onclick="sendMsgEventHandler()" >
+                </form>
+            </div>
+        
+            <!-- <div class="col-2">
+                <p class="self-align:center" style="text-align:center">Partcipants List</p>
+                <div>
+                    <ul id="participantsList">
+                    </ul>
+                </div>
+    
+            </div> -->
+            <div class="col-2 mt-2" style="border: 2px solid black; max-height: 400px; overflow:auto; background-color:  rgba(226, 176, 135, 0.932); border-radius: 6px ;">
+                <p style="text-align:center; margin-top: 10px; font-size: larger; font-weight: bold; border: 1px solid black; background-color: crimson; height: 40px; color: cornsilk; border-radius: 10px;">Active</p>
+                <div>
+                    <ul id="participantsList" style="padding-top: 10px; font-weight:bold">
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+    </body>
+</html>
